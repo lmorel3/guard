@@ -1,0 +1,52 @@
+{{define "content"}}
+<div class="wrapper">
+    <form class="login-form" method="POST">
+
+        <div class="logo-wrapper">
+            <a href="/"><img class="logo" src="/assets/logo.png" alt="Guard"></a>
+            <h2>Edit your password</h2>
+        </div>
+
+        {{ if .alreadyTaken }}
+        <div class="notif-wrapper error">
+            <p>This username has already been taken.</p>
+        </div>
+        {{ end }}
+
+        <div class="input-wrapper">
+            <input type="text" name="username" placeholder="Username" autofocus="">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="password" name="password" id="new_pwd" placeholder="Confirmation">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="password" placeholder="New password, again" id="new_pwd2" oninput="checkMatch()">
+        </div>
+
+        <div class="input-wrapper-checkbox">
+            <label for="make_admin">Make admin?</label>
+            <input type="checkbox" name="make_admin" id="make_admin">
+        </div>
+	
+    	<div class="login-wrapper">
+            <button>Add</button>
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+function checkMatch() {
+    let pwd = document.querySelector("#new_pwd");
+    let pwd2 = document.querySelector("#new_pwd2");
+
+    if(pwd.value !== pwd2.value) {
+        pwd2.classList.add('input-error');
+    } else {
+        pwd2.classList.remove('input-error');
+    }
+}
+</script>
+{{end}}

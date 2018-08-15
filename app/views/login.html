@@ -1,0 +1,29 @@
+{{define "content"}}
+<div class="wrapper">
+    <form class="login-form" method="POST" action="">
+
+        <div class="logo-wrapper">
+            <a href="/"><img class="logo" src="/assets/logo.png" alt="Guard"></a>
+        </div>
+
+        {{ if .badCredentials }}
+	    <div class="notif-wrapper error">
+            <p>Invalid credentials.</p>
+        </div>
+	    {{ end }}
+
+        <div class="input-wrapper">
+            <input type="text" name="username" placeholder="Username" autofocus="">
+        </div>
+
+        <div class="input-wrapper">
+            <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <div class="login-wrapper">
+            <button>Login</button>
+        </div>
+
+     </form>
+</div>
+{{end}}
