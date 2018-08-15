@@ -1,0 +1,36 @@
+{{define "content"}}
+
+<div class="wrapper">
+
+    <div class="logo-wrapper">
+        <img class="logo" src="/assets/logo.png" alt="Guard">
+        {{ if .isLogged }}<h2>Welcome, {{.username}}</h2>{{end}}
+        {{ if not .isLogged }}<h2>Welcome</h2>{{end}}
+    </div>
+	
+    {{ if .isLogged }}
+
+        {{ if .isAdmin }}
+        <div class="button-wrapper">
+            <a class="button" href="/admin">Administration</a>
+        </div>
+        {{ end }}
+
+    <div class="button-wrapper">
+        <a class="button" href="/password">Change your password</a>
+    </div>
+
+    <div class="button-wrapper">
+        <a class="button" href="/logout">Logout</a>
+    </div>
+	{{ end }}
+
+	{{ if not .isLogged }}
+        <div class="button-wrapper">
+            <a class="button" href="/login">Login</a>
+        </div>
+	{{ end }}
+
+ </div>
+
+{{end}}

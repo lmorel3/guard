@@ -1,0 +1,39 @@
+{{define "content"}}
+
+<div class="wrapper">
+
+        <div class="logo-wrapper">
+            <a href="/"><img class="logo" src="/assets/logo.png" alt="Guard"></a>
+            <h2>Users</h2>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><a href="/admin/users/add">+</a></th>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <th>Admin?</th>
+                    <th>Logged?</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range $i, $a := .usernames}}
+                <tr>
+                    <td>{{ $a }}</td>
+                    <td>{{call $.isAdmin $a}}</td>
+                    <td>{{call $.isLoggedIn $a}}</td>
+                    <td><a onclick="alert('Delete then add again to edit... :)')" href="#">Edit</a> - <a href="/admin/users/delete/{{$a}}" onclick="return confirm('Are you sure?')">Delete</a></td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+	
+ </div>
+
+{{end}}

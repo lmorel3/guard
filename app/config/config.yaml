@@ -1,0 +1,4 @@
+domain: guard.local
+guard: auth.guard.local
+allowed:
+  - public.guard.local

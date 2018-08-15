@@ -1,0 +1,191 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Ubuntu Light", sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: no-repeat center;
+}
+
+.wrapper {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 90px;
+    padding-top: 50px;
+}
+
+.title {
+    font-size: 30px;
+    color: #06253e;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.login-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.logo-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    padding-bottom: 51px;
+}
+
+.notif-wrapper {
+    background: #52bf90;
+    margin-bottom: 16px;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.notif-wrapper p {
+    margin: .5em;
+}
+
+.notif-wrapper.error {
+    background: #990000;
+}
+
+.input-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: #e6e6e6;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+.input-wrapper-checkbox {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.login-wrapper, .button-wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 17px;
+}
+
+button, a.button {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 62px;
+    background-color: #2389da;
+    border-radius: 3px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    outline: none !important;
+    border: none;
+    text-decoration: none;
+}
+
+button:hover, a.button:hover {
+    background-color: #0f5e9c;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+label {
+    font-family: sans-serif;
+    color: #000000;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+input {
+    font-family: sans-serif;
+    color: #06253e;
+    line-height: 1.2;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    height: 62px;
+    padding: 0 20px 0 38px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    height: 15px;
+    width: 15px;
+}
+
+input.input-error {
+    border: 1px solid #da0808;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+tbody {
+    font-weight: 100;
+}
+
+td:last-child, th:last-child {
+    text-align: right;
+}
